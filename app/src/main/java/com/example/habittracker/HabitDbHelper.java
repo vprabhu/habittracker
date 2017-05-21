@@ -76,9 +76,9 @@ public class HabitDbHelper extends SQLiteOpenHelper {
 
     /**
      * method queries from db through Cursor
-     * @return mHabitDataList returns the habit list
+     * @return mCursor returns the cursor object
      */
-    public List<HabitData> getHabitsLIst(){
+    public Cursor getHabitsLIst(){
         List<HabitData> mHabitDataList = new ArrayList<>();
         SQLiteDatabase mSqLiteDatabase = this.getReadableDatabase();
 
@@ -121,6 +121,6 @@ public class HabitDbHelper extends SQLiteOpenHelper {
         mSqLiteDatabase.close();
         mCursor.close();
 
-        return mHabitDataList;
+        return mCursor;
     }
 }
